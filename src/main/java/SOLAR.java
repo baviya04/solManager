@@ -44,8 +44,8 @@ public class SOLAR {
         driver.findElement(By.xpath("//h3[contains(text(),'40')]")).click();
      //   = driver.findElement(By.xpath("//h3[contains(text(),'Companies')]")).getText();
         WebDriverWait e= new WebDriverWait(driver, Duration.ofSeconds(50));
-        WebElement bo= e.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h3[contains(text(),'Companies')]")));
-        String val= bo.getText();
+        WebElement bo= e.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Donut")));
+        bo.click();
         if(val=="Companies")
         {
             System.out.println("companies is displayed successfully");
